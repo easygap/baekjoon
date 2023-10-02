@@ -11,11 +11,8 @@ public class Main {
 		
 		sc.close();
 		
-		int j = N;
-		
-		for(int i = 0; i < N ; i++) {
-			System.out.println(j);
-			j--;
+		for(int i = N; i >= 1 ; i--) {
+			System.out.println(i);
 		}
 	}
 }
