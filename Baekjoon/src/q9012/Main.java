@@ -11,29 +11,33 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		Stack<Integer> stack = new Stack<>();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
-		
+
 		int num = Integer.parseInt(bf.readLine());
-		
-		for ( int i = 0; i < num; i++ ){
+
+		for (int i = 0; i < num; i++) {
 			StringTokenizer st = new StringTokenizer(bf.readLine());
 			String s = st.nextToken();
-			
-			if(s.equals("(")) {
-				sb.append(stack.add(1));
-			}
-			else if(s.equals(")")) {
-				if(!s.isEmpty()) {
-					sb.append(stack.set(1, 0));
+			stack.clear();
+
+			for (int j = 0; j < s.length(); j++) {
+				char c = s.charAt(j);
+
+				if (c == '(') {
+					stack.add(1);
 				}
-				else
-					sb.append(stack.pop());
+
+				else if (c == ')') {
+					if (!stack.isEmpty()) {
+						stack.pop();
+					} else {
+						stack.add(0);
+						break;
+					}
+				}
 			}
-						
-			if(stack.search(0) != -1){
+			if (!stack.isEmpty() || stack.contains(0) != false) {
 				System.out.println("No");
-			}
-			else {
+			} else {
 				System.out.println("YES");
 			}
 		}
