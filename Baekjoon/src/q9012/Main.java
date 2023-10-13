@@ -36,7 +36,7 @@ public class Main {
 				}
 			}
 			if (!stack.isEmpty() || stack.contains(0) != false) {
-				System.out.println("No");
+				System.out.println("NO");
 			} else {
 				System.out.println("YES");
 			}
