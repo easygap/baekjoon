@@ -9,13 +9,20 @@ public class Main {
 		
 		int[] abc = new int[26];
 		
-		String word = sc.next();
-		char[] re = word.toCharArray();
+		String wr = sc.next();
+		sc.close();
+		char[] word = wr.toCharArray();
 		
 		for(int i = 0; i < abc.length; i++) {
 			abc[i] = -1;
 		}
 		
+		for(int i = word.length - 1; i >= 0; i--) {
+			abc[word[i]-97] = i;
+		}
 		
+		for(int i = 0; i < abc.length; i++) {
+			System.out.printf("%d ", abc[i]);
+		}
 	}
 }
