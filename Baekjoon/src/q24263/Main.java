@@ -1,4 +1,4 @@
-package q11718;
+package q24263;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,10 +9,9 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String word;
+		int num = Integer.parseInt(br.readLine());
 		
-		while((word = br.readLine()) != null) {
-			System.out.println(word);
-		}
+		System.out.println(num);
+		System.out.println(1);
 	}
 }
