@@ -35,8 +35,8 @@ class arithmetic {
         int sum = 0;
 
         // 배열의 합 구하기
-        for(int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+        for (int j : arr) {
+            sum += j;
         }
 
         return sum / arr.length; // 평균 반환
