@@ -15,7 +15,6 @@ public class Main {
         int b = sc.nextInt(); // b 입력
         int c = sc.nextInt(); // c 입력
         sc.close();
-        int result = a + b - c; // 결과
         Calculator cal = new Calculator(); // 계산기 클래스 생성
 
         System.out.println(cal.calNum(a, b, c)); // 숫자 연산 결과 출력
@@ -31,6 +30,6 @@ class Calculator {
 
     // 문자열 연산
     public int calAlp(int a, int b, int c) {
-        return Integer.parseInt(String.valueOf(a) + String.valueOf(b)) - c;
+        return Integer.parseInt(a + "" + b) - c;
     }
 }

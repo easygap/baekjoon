@@ -28,7 +28,7 @@ public class Main {
     }
 }
 
-/**
+/*
  * @Description: 음악 클래스
  */
 class Music {
